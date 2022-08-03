@@ -31,12 +31,29 @@ Because we limited the function $x∈X$, we want to check the error which result
 
 In the code, we have implemented the first 3 examples shown in this paper. To create $\mathcal{G}$, we first create a random set of point $V$ and a graph of 6 nearest neighbors in $l_2 (6-nn), G_1=(V,E_k )$. All future graphs $(G_k )$ are use a shifting function to relocate the point $V$, and then calculate the 6-nn, in order to create a $E_k$ (see the figures explanation for full construction of the examples and expectation of what results we will get). For every example we plot the $\mathcal{G}, λ_1 (L_t )$ to find $t^\*$ and the optimal function.
 
+![alt text](https://github.com/BIueMan/Implementation-of-paper---Common-Variable-Minimax-Theorem-for-Graphs/blob/main/images/figure%201.png)
+
+### Example 1
+**Figure 1** – $G_1$  and $G_2$ are a 6-nearest neighbor graph of the same random points. when G_1 the point is located normal random around $|x|,|y|≤0.5$. and $G_2$ use the same point that have been independently randomly rotated the origin.
+
+**Note:** the point keeps the same distance from the origin (r), and we expect to have a strong correlation between the graphs in that regard.
+
+![alt text](https://github.com/BIueMan/Implementation-of-paper---Common-Variable-Minimax-Theorem-for-Graphs/blob/main/images/figure%202.png)
+
+**Figure 2** – the plot is a product of the value of the smallest nontrivial eigenvalue of $L_t$, which is a linear combination of the normalize Laplacian of $G_1,G_2$. We assume that the function we extract from $L_t$, will corelate to the distance of the point from the origin.
+In this case, t = (0.5320    0.4680), with error estimating of 1.3966e-06.
+
+![alt text](https://github.com/BIueMan/Implementation-of-paper---Common-Variable-Minimax-Theorem-for-Graphs/blob/main/images/figure%203.png)
+
+**Figure 3** – we plot the function $φ_1$ correlate to the $λ_1$ for both $L_t,L_1,L_2$, against their distance from the origin. we can see that $φ_1 (L_t )$ have a strong correlation between it and the distance from the origin as we expected. Will for $φ_1 (L_1 ),φ_1 (L_2 )$, there is not enough information to extract that information.
+
+
 ## Review
 
 We created the examples in a specific way that give us a distinct common attribute between the graphs (like in example 1,2), or opposite attribute between the graph (like in example 3). The model extracts those attributes really good, and even manages to use only the most significant graphs.
 The first problem that arises is the selection of $t$, we selection it will only looking at the first eigenvalue of $L_t$. That is a logical solution because it bases on the most dominant function over all of $\mathcal{G}$. But what if the attribute is spared over a pair of different graphs. We can get more than one local maxima, and the algorithm will converge only on one of them, but miss the other.
 
-##Extension:
+## Extension:
 
 The paper recommends more ways to calculate $L_t$, and I tend to agree. We can choose the function $L_t$ base of what we expect to get, or choose the one that gives you the best results. In addition, trying to take into account not just the strongest eigenvalue, but all the local maxima. Can help us extract different information from different point of $t$. 
 
