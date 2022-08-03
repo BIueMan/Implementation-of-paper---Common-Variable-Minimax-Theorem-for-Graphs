@@ -47,6 +47,41 @@ In this case, t = (0.5320    0.4680), with error estimating of 1.3966e-06.
 
 **Figure 3** – we plot the function $φ_1$ correlate to the $λ_1$ for both $L_t,L_1,L_2$, against their distance from the origin. we can see that $φ_1 (L_t )$ have a strong correlation between it and the distance from the origin as we expected. Will for $φ_1 (L_1 ),φ_1 (L_2 )$, there is not enough information to extract that information.
 
+### Example 2
+
+![alt text](https://github.com/BIueMan/Implementation-of-paper---Common-Variable-Minimax-Theorem-for-Graphs/blob/main/images/figure%204.png)
+
+**Figure 4** – for the second part of the paper, we create a 3D connection graphs, of 6-nn. $G_1$ is a 6-nn graph with points spared in uniform random sphere $(r,ϕ,η)$ where $r≤1,ϕ∈[0,2π],η∈[0,π]$. $G_2$ points use the point of $G_1$ with randomly rotated on the $(x,y)$ axis, will keeping the same distance from the origin. And $G_2$ on the $(x,z)$ axis. We expect the strong correlated to the distance from the origin like before.
+
+![alt text](https://github.com/BIueMan/Implementation-of-paper---Common-Variable-Minimax-Theorem-for-Graphs/blob/main/images/figure%205.png)
+
+**Figure 5** – like before, the plot is a product of the $λ_1 (L_t )$, of matrix $L_t (t_1,t_2 )  [t_3=1-t_1-t_2 ]$ which is a linear combination of the normalize Laplacian of $G_1,G_2,G_3$.
+The maxima full under - t = (0.3341    0.4370    0.2289) with an error estimation of 1.1492e-05.
+
+![alt text](https://github.com/BIueMan/Implementation-of-paper---Common-Variable-Minimax-Theorem-for-Graphs/blob/main/images/figure%206.png)
+
+**Figure 6** – we plot the function $φ_1$  correlate to the $λ_1$ for both $L_t,L_1,L_2,L_3$, against the distance from the origin. We can clearly see a strong correlation between the distance and $φ_1 (L_t )$ as we expected.
+
+## Example 3
+
+![alt text](https://github.com/BIueMan/Implementation-of-paper---Common-Variable-Minimax-Theorem-for-Graphs/blob/main/images/figure%207.png)
+
+**Figure 7** – on the third part of the paper, we create a 2D connection graphs, of 6-nn. $G_1$ have it points spared in normal random in a polar shape $(r,ϕ)$ when $r≤1,ϕ∈[0,2π]$. $G_2$  and $G_3$ manipulate the points like so: $X_2=f(X_1 ),f(x,y)=(x,y(1-\cos{⁡πx} )),X_3=f(X_1 ),f(x,y)=(x(1-\cos⁡{πy} ),y)$. Where $X1,X2,X3$ are the points of $G_1,G_2,G_3$.
+
+**Note:** this time there is a strong separation between the sign of the points in the x axis (in G_2) and sign of in the y axis (in G_3), so we expect a strong separation between the 4 Quarters.
+
+![alt text](https://github.com/BIueMan/Implementation-of-paper---Common-Variable-Minimax-Theorem-for-Graphs/blob/main/images/figure%208.png)
+
+**Figure 8** – this time, the maximum occurs on t = (0.0000    0.4874    0.5126) with an error estimation of 4.6823e-04, we can see there is no uses of the Laplacian $L_1$. It seems using the Laplacians $L_2,L_3$  give as the strongest correlation for the first nontrivial eigenvalue.
+
+**Note:** next we going 2 extract the tree most dominant function from $L_t$ and plot them as point in a 3D space.
+
+![alt text](https://github.com/BIueMan/Implementation-of-paper---Common-Variable-Minimax-Theorem-for-Graphs/blob/main/images/figure%209.png)
+
+**Figure 9** – we plot the function of the points in a 3D space, with the corresponding $L_{t^\* }$ we found before. We split the points base of their location on $G_1$ (NE, NW, SW, SE). 
+
+
+
 
 ## Review
 
